@@ -1,0 +1,20 @@
+rfid connection pins
+
+SDA - 10 Pin 
+ SCK   13 Pin
+ MOSI  11 Pin
+ MISO  12 Pin
+ GND   GNd
+ RST   9 Pin
+ 3.3v  3.3v
+
+arduino to esp data transfer connection
+
+GND - GND ( not required)
+TX - 7 (DP)
+RX - 8 (DP)
+
+esp to arduino connection pins
+
+GND - GND(not required ) 
+GPIO2 - RX (0 NO PIN OF ARDUINO)

@@ -1,0 +1,4 @@
+For Adding Students : https://killing-winters.000webhostapp.com/addstud
+
+For searching and Viewing Students :
+https://killing-winters.000webhostapp.com/showdata
