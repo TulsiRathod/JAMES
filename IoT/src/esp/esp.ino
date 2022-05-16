@@ -1,16 +1,33 @@
 #include <SoftwareSerial.h> //SERIAL COMMUNICATION WITH ARDUINO UNO R3
 #include <ESP8266WiFi.h> // CONNECTING WITH WIFI 
 #include <WiFiClientSecure.h> // COMMUNICATION WITH INTERNET API'S
+#include <ArduinoJson.h>
 
 SoftwareSerial Esp8266_SoftSerial (0,2); //RX, TX 
 
+StaticJsonDocument<1024> Post_req;
+
+Post_req["sensor"] = "gps";
+Post_req["time"] = 1351824120;
+Post_req["sensor"] = "gps";
+Post_req["time"] = 1351824120;
+Post_req["sensor"] = "gps";
+Post_req["time"] = 1351824120;
+
+
+
+JsonArray data = doc.createNestedArray("data");
+
 #define buzzerPin 16  // buzzer
 #define Internet_status 4 // Internet_connection Active/Inactive
-//#define Response_status 12
+#define Response_status 12
 
 // except: [0 2 4 12] all GPIO [16] is free 
 
 /*Global variable for data storage in serial communication */
+String Rfid_tag_ID_list_json=""; 
+char Reg_c;
+String bufferStorage;
 
 
 /*Internet Communication  */
@@ -22,12 +39,13 @@ const int httpsPort = 443;
 
 /* Wifi Communication */
 
-char WIFI_SSID[3][30]={"winter","Jeshvi","winter_stark"};
-char WIFI_PASSWORD[3][30]={"password","Winterisgreat97","12345678#"};
+char WIFI_SSID[3][30]={"Jeshvi","winter","winter_stark"};
+char WIFI_PASSWORD[3][30]={"Winterisgreat97","password","12345678#"};
 char connection_req_ssid[30];
 int connection_index = 0;
 
 WiFiClientSecure client; // Use WiFiClientSecure class to create TLS connection
+
 
 
 void setup() {
@@ -36,8 +54,8 @@ void setup() {
 pinMode(buzzerPin,OUTPUT);
 digitalWrite(buzzerPin,LOW);
 
-//pinMode(Response_status,OUTPUT);
-//digitalWrite(Response_status,LOW);
+pinMode(Response_status,OUTPUT);
+digitalWrite(Response_status,LOW);
 
 /*Open Serial communication (NodeMcu-Arduino) */
 Esp8266_SoftSerial.begin(9600);
@@ -104,36 +122,7 @@ bool establish_secure_connection(unsigned long int baud_rate,String Ssid,String 
      Serial.println();
      Serial.println("Internet status = CONNECTED"); // Debug statement
      
-     client.setInsecure(); //making connection Insecure to send data on api
-
-     /* making connection to API */
-     
-     Serial.print("Connecting to Api : ");
-     Serial.print(host);
-     Serial.println(url);
- 
-     if(client.connect(host, httpsPort))
-     {
-     Serial.println("Connection Succeeded to Api !");
-
-     /* System start Indication */
-
-     Serial.println(" ");
-     Serial.println("Esp8266 is ready to receive data and sending that to API for verification."); // we can change to LED/LCD Print
-     Serial.println(" ");
-     
-     }
-     else
-     {
-
-      /* System failed Indication */
-
-      Serial.println(" ");
-      Serial.println("Connection Failed to Api !");
-      Serial.println("Something went wrong !");
-      Serial.println(" ");
-      
-     }
+     Serial.println("Esp8266 is ready to serve...");
      
   }
   else
@@ -186,15 +175,44 @@ bool establish_secure_connection(unsigned long int baud_rate,String Ssid,String 
 }
 
 
-
-bool receiveTagId(String &str)
+bool receiveTagIdList()
 { 
-  
+          while(Esp8266_SoftSerial.available () >0)
+          {
+              Reg_c = Esp8266_SoftSerial.read();
+              Serial.println(Reg_c);
+//              if(Reg_c =='}'){Reg_c+='}';break;}
+              //else{bufferStorage+=Reg_c ; }
+              bufferStorage+=Reg_c ;
+              Serial.println(" I am gathering data...");
+          }
+
+          //if(Reg_c =='}')
+          //{
+
+             if(bufferStorage!="")
+             Rfid_tag_ID_list_json = bufferStorage;
+          //}
+          
+          //Reset the buffer storage area
+          Reg_c='-';
+          bufferStorage="";
+
+          Serial.println("data we got : "+Rfid_tag_ID_list_json);
+          
+          if(Rfid_tag_ID_list_json!="")
+          return true;
+          else
+          return false;
 }
+
+/*
+
+
 
 void forwardResponse(String Res)
 {
-  /* Forwarding Reponse given by API to Arduino */
+  // Forwarding Reponse given by API to Arduino 
    Esp8266_SoftSerial.print(String(Res+"\n"));
 
    Serial.println(String("I have forwarded the Response : "+Res));
@@ -215,7 +233,7 @@ void loop() {
         Serial.println("Internet status = CONNECTED"); // Debug statement
         Serial.println("before:"+Rfid_tag_ID);
 
-        /* RFID RECEIVE */
+        // RFID RECEIVE 
         
           char Reg_c='-';
           String bufferStorage;
@@ -240,7 +258,7 @@ void loop() {
           Reg_c=0;
           bufferStorage="";
         
-        /***************/
+        /-/
 
         
         if(Rfid_tag_ID!="")  // function to receive tag ID coming from Arduino
@@ -248,12 +266,9 @@ void loop() {
           
           Rfid_tag_ID.trim();
           Serial.println("after:"+Rfid_tag_ID);
-          /* Send Received ID to API Server for validation */
+          // Send Received ID to API Server for validation -/
 
-         String postReq = String("POST "+ url + " HTTP/1.1\r\n" +"Host: " + host + "\r\n"+"Content-length: 147\r\n"+"Content-Type: application/json\r\n"+"{\"data\":\""+String(Rfid_tag_ID)+"\"}"); 
-         Serial.println(postReq);
-         delay(1000);
-         client.print(postReq);
+         
          
          Api_Response = client.readString();
          
@@ -264,10 +279,10 @@ void loop() {
                Api_Response = Api_Response.substring(Api_Response.lastIndexOf(':')+2,Api_Response.lastIndexOf('"'));
                Serial.println(Api_Response);  // Debug statement: here name of user will come we need to print it in display
 
-               /* forward response to arduino */
+               // forward response to arduino -/
                forwardResponse(String(Rfid_tag_ID+"==OK"));
                
-              /* buzzer part */
+              // buzzer part -/
                tone(buzzerPin,1000);  // attedance fill up sound we need to set different
                delay(2000);
                noTone(buzzerPin);
@@ -279,12 +294,12 @@ void loop() {
                Api_Response = Api_Response.substring(Api_Response.lastIndexOf(':')+2,Api_Response.lastIndexOf('"'));
                Serial.println(Api_Response);  // Debug statement: here name of user will come we need to print it in display
 
-               /* forward response to arduino */
+               /- forward response to arduino -/
                Serial.println("else  block");
                
                forwardResponse(Api_Response);
 
-               /* buzzer part */
+               // buzzer part -/
                tone(buzzerPin,1000);  // invalid ID sound we need to set it different
                delay(2000);
                noTone(buzzerPin);
@@ -303,11 +318,75 @@ void loop() {
          Serial.println("API :"+Api_Response+" "+"RFid_tag_ID :"+Rfid_tag_ID);
     }
    
+    
+
+
+}
+
+*/
+
+
+void loop()
+{
+    
+   while(WiFi.status()==WL_CONNECTED)  
+   {
+     client.setInsecure(); //making connection Insecure to send data on api
+
+     /* making connection to API */
+     
+     Serial.print("Connecting to Api : ");
+     Serial.print(host);
+     Serial.println(url);
+ 
+     if(client.connect(host, httpsPort))
+     {
+          Serial.println("Connection Succeeded to Api !");
+          
+          if(receiveTagIdList())
+          {  
+            String postReq = String("POST "
+            +url 
+            + " HTTP/1.1\r\n" 
+            +"Host: " 
+            + host 
+            + "\r\n" 
+            +"Content-length: 147\r\n"
+            +"Content-Type: application/json\r\n" 
+            + String(Rfid_tag_ID_list_json)
+            +"}");
+            
+//            +"{\"data\":\""
+//            +String(Rfid_tag_ID)+"\"}"); 
+            
+            Serial.println(postReq);
+            //client.print(postReq);
+
+          }
+          else
+          {
+            Serial.println ("I am waiting...");
+          }
+         
+     }
+     else
+     {
+
+      /* System failed Indication */
+      Serial.println(" ");
+      Serial.println("Connection Failed to Api !");
+      Serial.println("Something went wrong !");
+      Serial.println(" ");
+      
+     }
+   }
+   if(WiFi.status()== WL_DISCONNECTED)
+   {   
     digitalWrite(Internet_status,LOW);
     Serial.println();
     Serial.println("Internet status = NOT_CONNECTED"); // Debug statement
 
-    /* buzzer part */
+    //- buzzer part -/
     
     tone(buzzerPin,1000); // here we need to set different sound because in between service down  
     delay(3000);
@@ -315,11 +394,6 @@ void loop() {
     
     Serial.println();
     Serial.println("Connection lost trying to reconnect...");
-    
- 
-   if(WiFi.status()== WL_DISCONNECTED)
-   {   
-    
       while(!establish_secure_connection(115200,WIFI_SSID[connection_index],WIFI_PASSWORD[connection_index]))
       { 
         if(connection_index<2)
@@ -332,6 +406,4 @@ void loop() {
         }
       }
    }
-
-
 }

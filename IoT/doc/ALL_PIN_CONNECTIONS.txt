@@ -1,5 +1,9 @@
 rfid connection pins
 
+5 red
+6 green
+7 blue
+
 SDA - 10 Pin 
  SCK   13 Pin
  MOSI  11 Pin
