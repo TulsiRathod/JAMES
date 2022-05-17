@@ -36,8 +36,8 @@ MFRC522 mfrc522(SS_PIN,RST_PIN);   // Create MFRC522 instance/object.
 
 const char* serverName = "http://killing-winters.000webhostapp.com/api/add"; // Domain Name with full URL Path for HTTP POST Request
 
-char WIFI_SSID[3][30]={"Savaliya","winter","Jeshvie"};
-char WIFI_PASSWORD[3][30]={"12355321","12345678#","Winterisgreat97"};
+char WIFI_SSID[3][30]={"Jeshvi","ABCD","winter"};
+char WIFI_PASSWORD[3][30]={"Winterisgreat97","12345678","12345678#"};
 char connection_req_ssid[30];
 int connection_index = 0;
 
