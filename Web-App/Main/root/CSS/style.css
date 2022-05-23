@@ -34816,6 +34816,9 @@ div.tagsinput span.tag a {
     }
 }
 
+
+/* Meet's new css */
+
 .fieldstyle {
     border: 1px solid #515058;
 }
@@ -34825,7 +34828,7 @@ div.tagsinput span.tag a {
 }
 
 #bgcont {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/IMAGES/bg1.jpg);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/IMAGES/bg1.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
 }
