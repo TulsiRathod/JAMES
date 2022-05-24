@@ -8,12 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- plugins:css -->
     <link rel="stylesheet" href="Venders/feather/feather.css">
-    <link rel="stylesheet" href="Venders/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" href="Venders/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="CSS/datatables.net-bs4/dataTables.bootstrap4.css">
-    <link rel="stylesheet" href="Venders/ti-icons./css/themify-icons.css">
     <link rel="stylesheet" type="text/css" href="CSS/select.dataTables.min.css">
 
     <!-- Google fonts poppins -->
@@ -28,6 +26,8 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="shortcut icon" href="IMAGES/logo1.svg" />
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Login | JPD AMS</title>
 </head>
 
@@ -56,7 +56,7 @@
                                         <input type="checkbox" class="form-check-info ml-1 mt-1" id="remem" value="something">
                                         <label for="remem" class="mt-1 rememtxt">Remember me</label>
                                     </div>
-                                    <a href="HTML/forgotpass.html" class="auth-link text-black mt-0">Forgot password?</a>
+                                    <a href="HTML/forgotpass.html" class="auth-link text-black mt-0" id="forgotpass">Forgot password?</a>
                                 </div>
                                 <div class="mt-2 text-center">
                                     <a class="btn btn-primary btn-icon-text" href="/HTML/index.html">Login</a>
@@ -74,6 +74,14 @@
     </div>
     <!-- page-body-wrapper ends -->
     </div>
+    <script>
+        $(document).ready(function() {
+            $("#forgotpass").click(function() {
+                confirm("Are you sure you want to Reset your Password?")
+            });
+        });
+    </script>
+
 </body>
 
 </html>
