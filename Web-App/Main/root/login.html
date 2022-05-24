@@ -46,11 +46,12 @@
                             <h2 class="font-weight-bolder text-center">Login</h2>
                             <form class="pt-3">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-lg fieldstyle" id="txtspid" placeholder="Enter Your Email ID">
+                                    <input type="text" class="form-control form-control-lg fieldstyle" id="txtemail" placeholder="Enter Your Email ID">
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control form-control-lg fieldstyle" id="txtpass" placeholder="Password">
                                 </div>
+                                <div id="error" style="color:red"></div>
                                 <div class="my-2 d-flex justify-content-between align-items-center">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-info ml-1 mt-1" id="remem" value="something">
@@ -58,9 +59,9 @@
                                     </div>
                                     <a href="HTML/forgotpass.html" class="auth-link text-black mt-0" id="forgotpass">Forgot password?</a>
                                 </div>
-                                <div class="mt-2 text-center">
-                                    <a class="btn btn-primary btn-icon-text" href="/HTML/index.html">Login</a>
 
+                                <div class="mt-2 text-center">
+                                    <a class="btn btn-primary btn-icon-text" onclick="validate()">Login</a>
                                 </div>
                         </div>
                     </div>
@@ -81,7 +82,7 @@
             });
         });
     </script>
-
+    <script src="./JS/validate.js"></script>
 </body>
 
 </html>
