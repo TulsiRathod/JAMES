@@ -34819,23 +34819,5 @@ div.tagsinput span.tag a {
 
 /* Meet's new css */
 
-.fieldstyle {
-    border: 1px solid #515058;
-}
-
-.fieldstyle:focus {
-    border: 2px solid #515058;
-}
-
-#bgcont {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../IMAGES/bg1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.rememtxt {
-    font-size: 15px;
-}
-
 
 /*# sourceMappingURL=../maps/vertical-layout-light/style.css.map */
