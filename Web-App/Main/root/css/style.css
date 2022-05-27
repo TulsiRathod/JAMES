@@ -7,8 +7,8 @@
 }
 
 #bgcont {
-    /* background: rgb(44,73,102);
-    background: radial-gradient(circle, rgba(44,73,102,1) 0%, rgba(255,255,255,1) 100%); */
+    background: rgb(44,73,102);
+    background: radial-gradient(circle, rgba(44,73,102,1) 0%, rgba(255,255,255,1) 100%);
     background-size: cover;
     background-repeat: no-repeat;
 }
