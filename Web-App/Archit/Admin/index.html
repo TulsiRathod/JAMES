@@ -2,351 +2,134 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Student Dashboard</title>
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="/Venders/feather/feather.css">
-  <link rel="stylesheet" href="/Venders/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css">
-  <!-- endinject -->
-  <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-  <link rel="stylesheet" href="/Vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" type="text/css" href="/css/select.dataTables.min.css">
-  <!-- End plugin css for this page -->
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+        content="AMS,JP Dawer,Attendance Managment System,Web Application,IoT Integration Web App,RFID based Attendance Management System" />
+    <meta name="description"
+        content="J P Dawer Institute & Department of ICT has RFID based Automatic Attendance Managment System with Web Application User Interface for student as well faculties and Full features System Admin Panel" />
+    <meta name="author" content="TEAM JPD AMS" />
+    <meta http-equiv="refresh" content="60" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="/css/style.css">
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/Venders/feather/feather.css">
+    <link rel="stylesheet" href="/Venders/ti-icons/css/themify-icons.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" type="text/css" href="/css/select.dataTables.min.css">
+    <!-- End plugin css for this page -->
 
-  <link rel="shortcut icon" href="/Assets/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style2.css">
+
+    <link rel="shortcut icon" href="/Assets/favicon.png" />
 </head>
 
 <body>
 
-  <!-------------------------------------------------------Nav-Bar Start------------------------------------------------------->
-  <div class="container-scroller" style="background-color: #F5F7FF;">
-    <!-- partial:partials/_navbar.html -->
-    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="/index.html"><img src="/Assets/logo.svg" class="mr-2"
-            alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="/index.html"><img src="/Assets/logo-mini.svg" alt="logo" /></a>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+    <!-------------------------------------------------------Nav-Bar Start------------------------------------------------------->
+    <div class="container-scroller" style="background-color: #F5F7FF;">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center">
 
-        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-          <span class="icon-menu"></span>
-        </button>
 
-        <!-------------------------------------------------------Search-bar Start------------------------------------------------------->
-        <ul class="navbar-nav mr-lg-2">
-          <li class="nav-item nav-search d-none d-lg-block">
-            <div class="input-group">
-              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-                <span class="input-group-text" id="search">
-                  <i class="icon-search"></i>
-                </span>
-              </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now"
-                aria-label="search" aria-describedby="search">
+                <button class="navbar-toggler navbar-toggler-right  align-self-center ml-3" type="button"
+                    data-toggle="minimize">
+                    <span class="icon-menu"></span>
+                </button>
+
+                <a class="navbar-brand brand-logo mr-3" href="/index.html"><img src="/Assets/logo.svg" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="/index.html"><img src="/Assets/logo-mini.svg" alt="logo"
+                        width="34px" /></a>
             </div>
-          </li>
-        </ul>
-       
-        <!-------------------------------------------------------Search-bar End------------------------------------------------------->
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
 
-        <!-------------------------------------------------------Profile Start------------------------------------------------------->
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="/Assets/profile.jpg" alt="profile" />
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="/HTML/profile.html">
-                <i class="icon-head menu-icon"></i>
-                Profile
-              </a>
-              <a class="dropdown-item">
-                <i class="ti-power-off text-primary"></i>
-                Logout
-              </a>
+
+
+                <!-------------------------------------------------------Profile Start------------------------------------------------------->
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                            <img src="/Assets/profile.jpg" alt="profile" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="profileDropdown">
+                            <a class="dropdown-item" href="/HTML/profile.html">
+                                <i class="icon-head menu-icon"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item">
+                                <i class="ti-power-off text-primary"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-------------------------------------------------------Profile End------------------------------------------------------->
+
             </div>
-          </li>
-        </ul>
+        </nav>
+        <!-------------------------------------------------------Nav-Bar End------------------------------------------------------->
 
-        <!-------------------------------------------------------Profile End------------------------------------------------------->
+        <!-------------------------------------------------------Side Nav-Bar Start------------------------------------------------------->
+        <div class="container-fluid page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">
+                            <i class="icon-grid menu-icon"></i>
+                            <span class="menu-title">Home</span>
+                        </a>
+                    </li>
 
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-          data-toggle="offcanvas">
-          <span class="icon-menu"></span>
-        </button>
-      </div>
-    </nav>
-    <!-------------------------------------------------------Nav-Bar End------------------------------------------------------->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                            aria-controls="ui-basic">
+                            <i class="icon-layout menu-icon"></i>
+                            <span class="menu-title">Details Update</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="/html/createstud.html">Create
+                                        Student</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/html/createfaculty.html">Create
+                                        Faculty</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/html/editstud.html">Edit
+                                        Student</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/html/editfaculty.html">Edit
+                                        Faculty</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-    <!-------------------------------------------------------Side Nav-Bar Start------------------------------------------------------->
-    <div class="container-fluid page-body-wrapper">
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/index.html">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Home</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/HTML/profile.html" aria-expanded="false" aria-controls="ui-basic">
-              <i class="icon-head menu-icon"></i>
-              <span class="menu-title">Profile</span>
-            </a>
-          </li>
-
-      </nav>
-      <!-------------------------------------------------------Side Nav-Bar End------------------------------------------------------->
-
-      <!-------------------------------------------------------Main Content------------------------------------------------------->
-      <div class="main-panel">
-        <div class="content-wrapper">
-          <div class="row">
-            <div class="col-12 col-xl-8 mb-4 mb-xl-50">
-              <h3 class="font-weight-bold">Welcome Archit ,</h3>
-              <h6 class="font-weight-normal mb-10">All systems are running smoothly! </h6>
-            </div>
-
-            <!-------------------------------------------------------States------------------------------------------------------->
-            <div class="col-md-12 grid-margin transparent">
-              <div class="row">
-                <div class="col-md-3 mb-2 stretch-card transparent">
-                  <div class="card card-dark-blue ">
-                    <div class="card-body">
-                      <p class="mb-4">Total Days</p>
-                      <p class="fs-30 mb-2">31 days</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="col-md-3 mb-2 stretch-card transparent">
-                  <div class="card card-tale">
-                    <div class="card-body">
-                      <p class="mb-4">Presents</p>
-                      <p class="fs-30 mb-2">22 days</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 mb-2 stretch-card transparent">
-                  <div class="card card-light-danger">
-                    <div class="card-body">
-                      <p class="mb-4">Absents</p>
-                      <p class="fs-30 mb-2">5 days</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 mb-2 stretch-card transparent">
-                  <div class="card card-dark-blue bg-warning">
-                    <div class="card-body">
-                      <p class="mb-4">Holidays</p>
-                      <p class="fs-30 mb-2">4 days</p>
-                    </div>
-                  </div>
-                </div>
-              
-                
-              
-               
-              </div>
-            </div>
-            <!-------------------------------------------------------Table Started------------------------------------------------------->
-            <div class="col-lg-12 grid-margin">
-              <div class="card">
-                <div class="card-body">
-                  <div class="table-responsive pt-3">
-                    <table class="table table-bordered" id="tbl">
-                      <thead>
-                        <tr>
-                          <th>
-                            No.
-                          </th>
-                          <th>
-                            Date
-                          </th>
-                          <th>
-                            Subject Name
-                          </th>
-                          <th>
-                            Attendance
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            18-05-2022
-                          </td>
-                          <td>
-                            Web Development-II
-                          </td>
-                          <td>
-                            <span class="badge badge-success">Presents</span>
-                          </td>
-                          
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            18-05-2022
-                          </td>
-                          <td>
-                            Relational Database Management System – II
-                          </td>
-                          <td>
-                            <span class="badge badge-danger">Absents</span>
-                          </td>
-                          
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            18-05-2022
-                          </td>
-                          <td>
-                            Computer Graphics
-                          </td>
-                          <td>
-                            <span class="badge badge-warning">Pending</span>
-                          </td>
-                          
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            19-05-2022
-                          </td>
-                          <td>
-                            System Analysis and Design
-                          </td>
-                          <td>
-                            <span class="badge badge-success">Presents</span>
-                          </td>
-                          
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            19-05-2022
-                          </td>
-                          <td>
-                            Financial Accounting and Taxation
-                          </td>
-                          <td>
-                            <span class="badge badge-success">Presents</span>
-                          </td>
-                          
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            20-05-2022
-                          </td>
-                          <td>
-                            Relational Database Management System – II
-                          </td>
-                          <td>
-                            <span class="badge badge-warning">Pending</span>
-                          </td>
-                          
-                        </tr>
-                        <tr>
-                          <td>
-                            7
-                          </td>
-                          <td>
-                            20-05-2022
-                          </td>
-                          <td>
-                            Web Development-II
-                          </td>
-                          <td>
-                            <span class="badge badge-warning">Pending</span>
-                          </td>
-                          
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!----------------------------------------------Report Generate Start---------------------------------------------->
-
-          <button type="button" class="btn btn-primary btn-icon-text" id="btnExport" value="Export" onclick="Export()">
-            <i class="ti-download btn-icon-prepend"></i>
-            Download
-          </button>
-          <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
-          <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-          <script type="text/javascript">
-            function Export() {
-              html2canvas(document.getElementById('tbl'), {
-                onrendered: function (canvas) {
-                  var data = canvas.toDataURL();
-                  var docDefinition = {
-                    content: [{
-                      image: data,
-                      width: 500,
-                    }]
-                  };
-                  pdfMake.createPdf(docDefinition).download("Table.pdf");
-                }
-              });
-            }
-          </script>
-
-          <!----------------------------------------------Report Generate End---------------------------------------------->
-
+            </nav>
+            <!-------------------------------------------------------Side Nav-Bar End------------------------------------------------------->
         </div>
-      </div>
     </div>
-  </div>
 
 
 
-  <!-- plugins:js -->
-  <script src="/Venders/js/vendor.bundle.base.js"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page -->
-  <script src="/vendors/chart.js/Chart.min.js"></script>
-  <script src="/vendors/datatables.net/jquery.dataTables.js"></script>
-  <script src="/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-  <script src="/js/dataTables.select.min.js"></script>
 
-  <!-- End plugin js for this page -->
-  <!-- inject:js -->
-  <script src="/JS/off-canvas.js"></script>
-  <script src="/JS/hoverable-collapse.js"></script>
-  <script src="/JS/template.js"></script>
+    <!-- plugins:js -->
+    <script src="/Venders/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
 
-  <!-- endinject -->
-  <!-- Custom js for this page-->
-  <script src="/JS/dashboard.js"></script>
-  <script src="/JS/Chart.roundedBarCharts.js"></script>
+    <!-- inject:js -->
+    <script src="/JS/off-canvas.js"></script>
+    <script src="/JS/hoverable-collapse.js"></script>
+    <script src="/JS/template.js"></script>
+
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="/JS/dashboard.js"></script>
+
+
+
 </body>
 
 </html>
