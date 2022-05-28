@@ -71,20 +71,7 @@ PK:user_type_id
 2 |faculty
 3 |student
 
-
-6)subjects(done)
-
-PK: (cs_id)
-FK: course_id
-
-[cs_id|course_id | subject_code | subject_name | sem]
- 
-111|1 | 101 | CS | 1
-112|1 | 901 | IoT | 9
-113|2 | 101 | C | 1
-114|2 | 104 | Data mining | 4
-
-7)courses(done)
+6)courses(done)
 
 PK:(course_id)
 FK:
@@ -93,6 +80,31 @@ FK:
 
 1|IT|10
 2|ICT|4
+
+7)subjects_map(done)
+
+PK: (cs_id)
+FK: course_id,cs_id
+
+[cs_id|course_id | subject_code]
+
+111|1 | 101 
+112|1 | 901 
+113|2 | 101 
+114|2 | 104
+
+8)subjects_get(done)
+
+PK:(cs_id)
+FK:
+
+[cs_id| subject_name | sem]
+
+111|CS | 1
+112| IoT | 9
+113| C | 1
+114| Data mining | 4
+
 
 8)stud_assign_sub_setup(done)
 
