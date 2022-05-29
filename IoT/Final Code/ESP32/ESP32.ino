@@ -44,8 +44,8 @@ MFRC522 mfrc522(SS_PIN, RST_PIN); // Create MFRC522 instance/object.
 const char *serverName = "http://killing-winters.000webhostapp.com/api/add"; // Domain name with full URL path to an api for HTTP POST Request
 
 //wifi configuration
-char WIFI_SSID[3][30] = {"winter", "VNSGU", "Jeshvi"}; // Wifi ssid array to store multiple wifi because in case of one connection failure system can auto connect with another wifi available
-char WIFI_PASSWORD[3][30] = {"password", "12345678", "Winterisgreat97"}; // ssid -password mapped
+char WIFI_SSID[3][30] = {"Jeshvi","winter", "VNSGU"}; // Wifi ssid array to store multiple wifi because in case of one connection failure system can auto connect with another wifi available
+char WIFI_PASSWORD[3][30] = {"Winterisgreat97","password", "12345678"}; // ssid -password mapped
 char connection_req_ssid[30]; // temporary SSID for debugging purpose
 int connection_index = 0; // counter for ssid and password from array
 
@@ -221,7 +221,7 @@ void loop()
   if(digitalRead(control_status) == HIGH) // if system gets command from Esp8266 to be online then system will work else don't
   {
       
-    if (WiFi.status() == WL_CONNECTED) // if wifi gets connected
+    if(WiFi.status() == WL_CONNECTED) // if wifi gets connected
     {
       digitalWrite(Internet_status,HIGH); // Internet status active
       Serial.println();
