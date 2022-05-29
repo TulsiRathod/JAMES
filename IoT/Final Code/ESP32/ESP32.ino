@@ -103,7 +103,7 @@ bool establish_secure_connection(unsigned long int baud_rate, const char *Ssid, 
         digitalWrite(Invalid_card_status, LOW);
 
         pinMode(Internet_status, OUTPUT);
-        digitalWrite(Internet_status, HIGH); // Intial status active
+        digitalWrite(Internet_status, LOW); // Intial status in-active
 
 
         /***********************************/
@@ -223,6 +223,9 @@ void loop()
       
     if (WiFi.status() == WL_CONNECTED) // if wifi gets connected
     {
+      digitalWrite(Internet_status,HIGH); // Internet status active
+      Serial.println();
+      Serial.println("Internet status = CONNECTED");
 
         if (mfrc522.PICC_IsNewCardPresent()) // Look for new rfid card tag
         {
@@ -336,5 +339,10 @@ void loop()
             }
         }
     }
+  }
+  else
+  {
+    last_read_tag_ID = "";
+    Rfid_tag_ID = "";  
   }
 }
