@@ -12,22 +12,22 @@
     <meta http-equiv="refresh" content="60" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Register Student</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="/Venders/feather/feather.css">
-    <link rel="stylesheet" href="/Venders/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../Venders/feather/feather.css">
+    <link rel="stylesheet" href="../Venders/ti-icons/css/themify-icons.css">
 
     <!-- endinject -->
 
     <!-- Plugin css for this page -->
 
-    <link rel="stylesheet" type="text/css" href="/css/select.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/select.dataTables.min.css">
     <!-- End plugin css for this page -->
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
 
-    <link rel="shortcut icon" href="/Assets/favicon.png" />
+    <link rel="shortcut icon" href="../Assets/favicon.png" />
 </head>
 
 <body>
@@ -37,30 +37,27 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center">
-
-
                 <button class="navbar-toggler navbar-toggler-right  align-self-center ml-3" type="button"
                     data-toggle="minimize">
                     <span class="icon-menu"></span>
                 </button>
 
-                <a class="navbar-brand brand-logo mr-3" href="/index.html"><img src="/Assets/logo.svg" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="/index.html"><img src="/Assets/logo-mini.svg" alt="logo"
-                        width="34px" /></a>
+                <a class="navbar-brand brand-logo mr-3" href="../index.html"><img src="../Assets/logo.svg"
+                        alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="../index.html"><img src="../Assets/logo-mini.svg"
+                        alt="logo" width="34px" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-
-
 
                 <!-------------------------------------------------------Profile Start------------------------------------------------------->
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                            <img src="/Assets/profile.jpg" alt="profile" />
+                            <img src="../Assets/profile.jpg" alt="profile" />
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                             aria-labelledby="profileDropdown">
-                            <a class="dropdown-item" href="/HTML/profile.html">
+                            <a class="dropdown-item" href="../HTML/profile.html">
                                 <i class="icon-head menu-icon"></i>
                                 Profile
                             </a>
@@ -83,42 +80,44 @@
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.html">
+                        <a class="nav-link" href="../index.html">
                             <i class="icon-grid menu-icon"></i>
                             <span class="menu-title">Home</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                          <i class="icon-layout menu-icon"></i>
-                          <span class="menu-title">Student</span>
-                          <i class="menu-arrow"></i>
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                            aria-controls="ui-basic">
+                            <i class="icon-layout menu-icon ti-user"></i>
+                            <span class="menu-title">Student</span>
+                            <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="ui-basic">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="/html/createstud.html">Create
+                            <ul class="nav flex-column sub-menu ">
+                                <li class="nav-item"> <a class="nav-link" href="../html/createstud.html">Register
                                         Student</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="/html/editfaculty.html">Modify
+                                <li class="nav-item"> <a class="nav-link" href="../html/editfaculty.html">Modify
                                         Faculty</a></li>
                             </ul>
                         </div>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-                          <i class="icon-columns menu-icon"></i>
-                          <span class="menu-title">Faculty</span>
-                          <i class="menu-arrow"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false"
+                            aria-controls="form-elements">
+                            <i class="icon-columns menu-icon"></i>
+                            <span class="menu-title">Faculty</span>
+                            <i class="menu-arrow"></i>
                         </a>
-                        <div class="collapse" id="form-elements">  
+                        <div class="collapse" id="form-elements">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="/html/createfaculty.html">Create
+                                <li class="nav-item"> <a class="nav-link" href="../html/createfaculty.html">Register
                                         Faculty</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="/html/editstud.html">Modify
+                                <li class="nav-item"> <a class="nav-link" href="../html/editstud.html">Modify
                                         Student</a></li>
                             </ul>
                         </div>
-                      </li>
+                    </li>
 
             </nav>
             <!-------------------------------------------------------Side Nav-Bar End------------------------------------------------------->
@@ -142,13 +141,13 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>PASSWORD</label>
+                                                    <label>Password</label>
                                                     <input type="password" class="form-control" id="psd"
                                                         placeholder="Enter Password">
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label>CONFIRM PASSWORD</label>
+                                                <label>Confirm Password</label>
                                                 <input type="password" class="form-control" id="confirm_psd"
                                                     placeholder="Confirm Password">
                                             </div>
@@ -163,7 +162,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label>ENROLLMENT NO</label>
+                                                <label>Enrollment No</label>
                                                 <input type="number" class="form-control" id="enroll_no"
                                                     placeholder="Enter Enrollment no">
                                             </div>
@@ -173,13 +172,13 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>FIRST NAME</label>
+                                                    <label>First Name</label>
                                                     <input type="text" class="form-control" id="fname"
                                                         placeholder="Enter First name">
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label>LAST NAME</label>
+                                                <label>Last Name</label>
                                                 <input type="text" class="form-control" id="lname"
                                                     placeholder="Enter Last name">
                                             </div>
@@ -189,7 +188,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group col-md-6">
-                                                    <label>GENDER</label>
+                                                    <label>Gender</label>
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -229,7 +228,7 @@
 
                                         <!--Birth date-->
                                         <div class="form-group  ">
-                                            <label>BIRTHDATE</label>
+                                            <label>Birthdate</label>
                                             <input type="date" class="form-control" id="bdate">
                                         </div>
 
@@ -244,7 +243,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>COURSE NAME</label>
+                                                    <label>Course Name</label>
                                                     <select class="form-control">
                                                         <option>IT</option>
                                                         <option>ICT</option>
@@ -253,7 +252,7 @@
                                             </div>
 
                                             <div class="form-group col-md-6 date">
-                                                <label>JOINING YEAR</label>
+                                                <label>Joining Year</label>
                                                 <input type="date" class="form-control" id="yearPicker"
                                                     name="yearpicker">
                                             </div>
@@ -263,7 +262,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>SEMESTER</label>
+                                                    <label>Semester</label>
                                                     <select class="form-control">
                                                         <option>1</option>
                                                         <option>2</option>
@@ -280,7 +279,7 @@
                                             </div>
 
                                             <div class="form-group col-md-6 date">
-                                                <label>DIVISION</label>
+                                                <label>Division</label>
                                                 <select class="form-control">
                                                     <option>A</option>
                                                     <option>B</option>
@@ -309,22 +308,49 @@
                                 </div>
                             </div>
                         </div>
-                        <!--Student Form End-->
 
+                        <!--CSV Input-->
+                        <div class="col-md-12  grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">CSV Input</h4>
+                                    <form class="forms-sample">
+                                        <!--csv --> 
+                                        <div class="form-group">
+                                            <label>CSV File</label>
+                                            <input type="file" name="img" class="file-upload-default">
+                                            <div class="input-group col-xs-12">
+                                                <input type="text" class="form-control file-upload-info" disabled
+                                                    placeholder="Upload CSV File">
+                                                <span class="input-group-append">
+                                                    <button class="file-upload-browse btn btn-primary"
+                                                        type="button">Upload</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mr-2 mt-3">Submit</button>
+                                        <button class="btn btn-light mt-3">Clear</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!--Student Form End-->
         </div>
     </div>
 
     <!-- plugins:js -->
-    <script src="/Venders/js/vendor.bundle.base.js"></script>
+    <script src="../Venders/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
 
     <!-- inject:js -->
-    <script src="/JS/off-canvas.js"></script>
-    <script src="/JS/hoverable-collapse.js"></script>
-    <script src="/JS/template.js"></script>
+    <script src="../JS/off-canvas.js"></script>
+    <script src="../JS/hoverable-collapse.js"></script>
+    <script src="../JS/template.js"></script>
+    <script src="../js/file-upload.js"></script>
 
     <!-- endinject -->
 
