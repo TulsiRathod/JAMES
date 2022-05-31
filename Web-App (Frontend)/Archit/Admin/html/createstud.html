@@ -12,7 +12,7 @@
     <meta http-equiv="refresh" content="60" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Faculty</title>
+    <title>Register Student</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../Venders/feather/feather.css">
     <link rel="stylesheet" href="../Venders/ti-icons/css/themify-icons.css">
@@ -37,8 +37,6 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center">
-
-
                 <button class="navbar-toggler navbar-toggler-right  align-self-center ml-3" type="button"
                     data-toggle="minimize">
                     <span class="icon-menu"></span>
@@ -50,8 +48,6 @@
                         alt="logo" width="34px" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-
-
 
                 <!-------------------------------------------------------Profile Start------------------------------------------------------->
                 <ul class="navbar-nav navbar-nav-right">
@@ -91,11 +87,10 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                            aria-controls="ui-basic">
-                            <i class="icon-layout menu-icon ti-user"></i>
-                            <span class="menu-title">Student</span>
-                            <i class="menu-arrow"></i>
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                          <i class="icon-layout menu-icon ti-user"></i>
+                          <span class="menu-title">Student</span>
+                          <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
@@ -105,15 +100,14 @@
                                         Student</a></li>
                             </ul>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false"
-                            aria-controls="form-elements">
-                            <i class="icon-columns menu-icon"></i>
-                            <span class="menu-title">Faculty</span>
-                            <i class="menu-arrow"></i>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+                          <i class="icon-columns menu-icon"></i>
+                          <span class="menu-title">Faculty</span>
+                          <i class="menu-arrow"></i>
                         </a>
-                        <div class="collapse" id="form-elements">
+                        <div class="collapse" id="form-elements">  
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link" href="./createfaculty.html">Register
                                         Faculty</a></li>
@@ -121,19 +115,19 @@
                                         Faculty</a></li>
                             </ul>
                         </div>
-                    </li>
+                      </li>
 
             </nav>
             <!-------------------------------------------------------Side Nav-Bar End------------------------------------------------------->
 
-            <!--Faculty Form Start-->
+            <!--Student Form Start-->
             <div class="main-panel">
                 <div class="content-wrapper">
                     <div class="row">
                         <div class="col-md-12  grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Register Faculty</h4>
+                                    <h4 class="card-title">Create Student</h4>
                                     <form class="forms-sample">
                                         <!--email-->
                                         <div class="form-group">
@@ -156,24 +150,19 @@
                                                     placeholder="Confirm Password">
                                             </div>
                                         </div>
-                                        <!--FID and Faculty Type-->
+                                        <!--Spid and Enrollment-->
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>FID</label>
+                                                    <label>SPID</label>
                                                     <input type="number" class="form-control" id="spid"
-                                                        placeholder="Enter Faculty ID">
+                                                        placeholder="Enter SPID">
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <div class="form-group">
-                                                    <label>Faculty Type</label>
-                                                    <select class="form-control">
-                                                        <option>Teaching</option>
-                                                        <option>LAB</option>
-                                                        <option>Staff</option>
-                                                    </select>
-                                                </div>
+                                                <label>Enrollment No</label>
+                                                <input type="number" class="form-control" id="enroll_no"
+                                                    placeholder="Enter Enrollment no">
                                             </div>
                                         </div>
 
@@ -235,31 +224,65 @@
                                             </div>
                                         </div>
 
-                                        <!--Contact No & Joining Year-->
+                                        <!--Birth date-->
+                                        <div class="form-group  ">
+                                            <label>Birthdate</label>
+                                            <input type="date" class="form-control" id="bdate">
+                                        </div>
+
+                                        <!--Contact No-->
+                                        <div class="form-group  ">
+                                            <label>Contact No</label>
+                                            <input type="number" class="form-control" id="contact_no"
+                                                placeholder="Mobile Number">
+                                        </div>
+
+                                        <!--Course name & joning year-->
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <div class="form-group date">
-                                                    <label>Joining Year</label>
-                                                    <input type="date" class="form-control" id="yearPicker"
-                                                        name="yearpicker">
+                                                <div class="form-group">
+                                                    <label>Course Name</label>
+                                                    <select class="form-control">
+                                                        <option>IT</option>
+                                                        <option>ICT</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group col-md-6 ">
-                                                <label>Contact No</label>
-                                                <input type="number" class="form-control" id="contact_no"
-                                                    placeholder="Mobile Number">
+
+                                            <div class="form-group col-md-6 date">
+                                                <label>Joining Year</label>
+                                                <input type="date" class="form-control" id="yearPicker"
+                                                    name="yearpicker">
                                             </div>
                                         </div>
 
                                         <!--Semester & Division-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Semester</label>
+                                                    <select class="form-control">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                        <option>10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 
-                                        <div class="form-group">
-                                            <label>Post</label>
-                                            <select class="form-control">
-                                                <option>Professor</option>
-                                                <option>Visiting Faculty</option>
-                                                <option>Assistant Faculty</option>
-                                            </select>
+                                            <div class="form-group col-md-6 date">
+                                                <label>Division</label>
+                                                <select class="form-control">
+                                                    <option>A</option>
+                                                    <option>B</option>
+                                                </select>
+                                            </div>
                                         </div>
 
                                         <!--Profile Image-->
@@ -284,26 +307,50 @@
                             </div>
                         </div>
 
-
-                        <!--Faculty Form End-->
+                        <!--CSV Input-->
+                        <div class="col-md-12  grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">CSV Input</h4>
+                                    <form class="forms-sample">
+                                        <!--csv --> 
+                                        <div class="form-group">
+                                            <label>CSV File</label>
+                                            <input type="file" name="img" class="file-upload-default">
+                                            <div class="input-group col-xs-12">
+                                                <input type="text" class="form-control file-upload-info" disabled
+                                                    placeholder="Upload CSV File">
+                                                <span class="input-group-append">
+                                                    <button class="file-upload-browse btn btn-primary"
+                                                        type="button">Upload</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mr-2 mt-3">Submit</button>
+                                        <button class="btn btn-light mt-3">Clear</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
+            <!--Student Form End-->
+        </div>
+    </div>
 
+    <!-- plugins:js -->
+    <script src="../Venders/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
 
-                <!-- plugins:js -->
-                <script src="../Venders/js/vendor.bundle.base.js"></script>
-                <!-- endinject -->
+    <!-- inject:js -->
+    <script src="../JS/off-canvas.js"></script>
+    <script src="../JS/hoverable-collapse.js"></script>
+    <script src="../JS/template.js"></script>
+    <script src="../js/file-upload.js"></script>
 
-                <!-- inject:js -->
-                <script src="../JS/off-canvas.js"></script>
-                <script src="../JS/hoverable-collapse.js"></script>
-                <script src="../JS/template.js"></script>
-
-                <!-- endinject -->
-
-
-
+    <!-- endinject -->
 
 </body>
 
