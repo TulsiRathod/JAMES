@@ -125,15 +125,15 @@ we will send email to student on vnsgu email
 and from : ams.jpd.admin@vnsgu.ac.in(from)(to:student,faculty,anyone...)
 
 
-[spid|enrollment_no|course_id|join_year|fname|lname|gender|cur_sem|div|dob|email|att_credit|contact_no|stud_profile_img]
+[spid|enrollment_no|course_id|join_year|fname|lname|gender|cur_sem|div|dob|email|att_credit|contact_no|stud_profile_img|stud_status]
 
-2020049910|12345678|1|2020|harshil|ramani|male|4|B|8 may-2003|harshilramani.mscit20@vnsgu.ac.in|84%|+91 9624561892|2020049910_profie_img.jpg/png
-
-
-2020049911|12345679|1|2020|krish|bhanderi|male|4|A|27 oct-2003|krishbhanderi.mscit20@vnsgu.ac.in|94%|+91 9624512345|2020049911_profie_img.jpg/png
+2020049910|12345678|1|2020|harshil|ramani|male|4|B|8 may-2003|harshilramani.mscit20@vnsgu.ac.in|84%|+91 9624561892|2020049910_profie_img.jpg/png|active
 
 
-2020049913|12345670|2|2021|drashti|dhola|female|2|A|15 nov-2001|drashtidhola.mscit20@vnsgu.ac.in|74%|+91 9624510005|2020049913_profie_img.jpg/png
+2020049911|12345679|1|2020|krish|bhanderi|male|4|A|27 oct-2003|krishbhanderi.mscit20@vnsgu.ac.in|94%|+91 9624512345|2020049911_profie_img.jpg/png|inactive
+
+
+2020049913|12345670|2|2021|drashti|dhola|female|2|A|15 nov-2001|drashtidhola.mscit20@vnsgu.ac.in|74%|+91 9624510005|2020049913_profie_img.jpg/png|active
 
 
 10)attedance(done)
