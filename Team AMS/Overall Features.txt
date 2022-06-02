@@ -6,8 +6,6 @@ Absent-present wise grouping
 
 sorting desecnding order
 
-month selection 
-
 as well total attedance rate per setup =(present+absent=total) where total is 100% and you need to give %
 
 searching by date and absent /present - single search bar only
@@ -18,10 +16,6 @@ and as shown above search bar as well other controls(slider (i will show you des
 
 
 virtual ID card of student like BRTS card design with name photo course sem only [sparkling effect and full screen effect should be there]
-
-also below that other information about acadmics about students 
-(remeber this feature should be like printable document like ~ resume)
-we can give data enter (SGPA CGPA ) for currently only so an entire resume can be made Ask me options that we need to make whenever we start developing this feature.
 
 About us Section about JP dower [last work to develop]
 In thet About developers where out 9 person profiles will be there.
