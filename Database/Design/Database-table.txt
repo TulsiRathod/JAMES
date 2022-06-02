@@ -112,7 +112,7 @@ FK:
 PK:(spid+ams_setup_id)
 FK:spid,ams_setup_id
 
-[spid|ams_setup_up]
+[spid|ams_setup_up|att_per]
 
 
 9)students(done)
@@ -185,12 +185,12 @@ FK:cs_id
 
 13)fac_ams_setup(done)
 
-PK:(fid+ams_setup_id)
+PK:(fid+ams_setup_id+auto_incr)
 FK:fid
 
-[fid|ams_setup_id]
-F-1234|1111
-F-1235|1113
-F-1232|1112
+[fid|ams_setup_id|auto_incr]
+F-1234|1111|1
+F-1235|1111|2
+F-1232|1112|3
 
 

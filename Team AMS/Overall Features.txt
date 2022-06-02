@@ -6,6 +6,10 @@ Absent-present wise grouping
 
 sorting desecnding order
 
+month selection 
+
+as well total attedance rate per setup =(present+absent=total) where total is 100% and you need to give %
+
 searching by date and absent /present - single search bar only
 
 display data in student dashboard by subjectwise(after click particulat subject data should be displayed) and it should display latest data attedance first.
