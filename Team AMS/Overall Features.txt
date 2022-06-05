@@ -1,100 +1,47 @@
+1] Student Dashboard
 
-1)student dashboard :-
+Features available :
 
-student can view attendance .
-Absent-present wise grouping
-
-sorting desecnding order
-
-as well total attedance rate per setup =(present+absent=total) where total is 100% and you need to give %
-
-searching by date and absent /present - single search bar only
-
-display data in student dashboard by subjectwise(after click particulat subject data should be displayed) and it should display latest data attedance first.
-
-and as shown above search bar as well other controls(slider (i will show you design)) for setting filter of absent / present data display only in table
+ - Students can view their attendance
+ - Grouping on the basis of absence and presence
+ - Sorting based on decending order
+ - Availability of attendance rate per setup 
+ - Single search bar availability based on date and attendance
+ - Slider to set filter to display data accordingly
+ - Display data subjectwise, latest on top
+ - Virtual ID card of student available
+ - About Us sections includes 9 developer profiles (task to be done at last)
 
 
-virtual ID card of student like BRTS card design with name photo course sem only [sparkling effect and full screen effect should be there]
+2] Faculty Dashboard 
 
-About us Section about JP dower [last work to develop]
-In thet About developers where out 9 person profiles will be there.
-we'all create that later on...
+Features available in side panel :
 
+i] New Setup 
+  - Details about sem, course, div and SPID ( two options available i.e. excel file and enter SPID )
+    E.g. In a case where students are to enrolled after this step, we just need to enter the SPID and the relevant details will be automatically loaded in the setup further. Finally, we just need to enter all the required SPIDs and ultimately final setup details must be sent to the database.
 
-2)Faculty dashboard:
+ii] Modify Setup
+  - Add or remove students from the setup as required although only enrollment details could be deleted with student details still remaining intact 
+    E.g. Suppose a student in the end semester of final year, the relative details could be updated to inactive status only being stored for the sole purpose of record.
 
+iii] Delete Setup
+  - setup can be deleted with due confirmation from the user and also before performing major actions like update, submit or delete.
 
-side panel
-
-~New setup :
-
-we Have to ask sem course and div
-and enrolled SPID-s [two option - excel file and SPID enter]
-here data will come from student table
-
-e.g.
-
-suppose after entering above details we need to enroll students
-and we just enter 1 SPID and that SPID related students details will be added to  that setup and it will visible on that screen in real time add and deletion feature
-
- after all SPID gets done here we just send final submit to create final changes to database.
+iv] Home 
+  - relevant details of the set up will be visible i.e. setups in google classroom, microsoft teams, etc.
+  - Option 1 : Setup can be selected and enrolled students' data can be viewed
+  - Option 2 : take attendance for that setup wherein RFID reader number, date and time should be given as input
+     (For this option, 2 screens may be presented to the user, first temporary wherein all read IDs are displayed and second wherein a list of enrolled students with their details and checkboxes. By checking these boxes, accordingly the student will be removed from the temporary screen ultimately leaving only absent students at last.)
+     Note : Option 2 required a variety of formatting options i.e. checkboxes, color coordinating absent present with green and red, mark all absent or present, summaries of absence and presence, manual modification of attendance, final submission to be done with a confirmation prompt box
 
 
-~ modify setup:
+3] System admin
 
-adding/remove students from AMS setup
+Features available :
+ - Student registration
+ - Faculty registration
+ - Student or Faculty modification
+ - Semester transfer (individually or all at once)
 
-only enrolling will be removed nothing else(student details wil be still present in STudent table)
-
-STUDENT ONCE enrolled in AMS database never gets deleted without admin account rights and access. we can make inactive student to not to display his data(usually 9 th or last sem student after they passed out)
-
-~delete setup
-
-deletion of setup we can delete particular setup with confirmation
-
-
-here in each modul we need to ask for confirmation each and everytime we are doing any major operation like update/delete/submit (final)
-
-
-~home
-
-here all details of set up will be visible
-like google classroom classed faculty will select setup by clicking
-and after that view data of enrolled student(for that setup only)-1 st option
-
-2nd option - take attedance for that setup
-
-here we need to give input of RFID reader number and time and date
-
-
-we can put two screen here 1) temp where all readed ID will come
-
-and 2) enrolled stundets will with checkbox and other details so automatically present students will be marked and removed from temp screen and only absent student will be highlighted in 2nd screen and
- in temp screen extra readed ID will be shown up (like for other semester)
-
-here in 2nd screen we need a lot of formatting like
-
-checkbox majorly / color of present absent 
-mark all at once feature absent seperate  present seperate
-
-give extra details(just <details><summary>) about absent one
-
-manually attedance modify 
-
-submit with confirm prompt
-
-
-3)System Admin
-
-
-student register/ faculty register
-student/faculty modification/update
-
-sem transfer~ whole/ single
-delete or make inactive students who discontinued from department
-
-
-so many feature will discuss it because this is so powerful account
-
-so we have to think in various scenarios  and i gonna need your help with that guys..
+(This area requires further more R&D  during development stage)
